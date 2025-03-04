@@ -1,4 +1,5 @@
-import { User, UserArgs } from "../types/sistemas";
+import { User, UserArgs } from "../types/usuarios";
+import sistemasResolvers from "./sistemas-resolver"; // Importar los resolvers de sistemas
 
 // Mock data, UserArgs
 const users: User[] = [
@@ -12,6 +13,7 @@ const resolvers = {
   Query: {
     users: (): User[] => users,
     user: (_: any, { id }: UserArgs): User | undefined => users.find((user) => user.id === id),
+    ...sistemasResolvers.Query, // Agregar los resolvers de sistemas
   },
 };
 

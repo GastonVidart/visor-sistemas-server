@@ -1,11 +1,9 @@
-// Tipos para el modelo User
-export interface User {
+export interface Sistema {
   id: string;
-  name: string;
-  email: string;
-}
-
-// Tipos para argumentos de resolvers
-export interface UserArgs {
-  id: string;
+  nombre: string;
+  descripcion?: string;
+  conectado: string[];
+  tipo: string;
+  tecnologias?: string[];
+  entorno?: string[];
 }
