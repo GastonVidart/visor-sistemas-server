@@ -3,7 +3,7 @@ const sistemasTypeDefs = `#graphql
     id: ID!
     nombre: String!
     descripcion: String
-    conectado: [String]
+    conectado: [ID]
     tipo: String!
     tecnologias: [String]
     entorno: [String]
